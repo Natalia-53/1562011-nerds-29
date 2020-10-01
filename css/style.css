@@ -1,0 +1,175 @@
+/* Основные цвета */
+:root {
+  --basik-white: #ffffff;
+  --basik-neutral: #EEEEEE;
+  --basic-yellow: #EFC849;
+  --basic-green:#00CA74;
+  --basic-red: #FB565A;
+  --basik-gray: #283136;
+  --basik-black: #000000;
+}
+
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-style: normal;
+  background-position: top center;
+  background-color: var(--basik-white);
+  color: var(--basik-black);
+  position: relative;
+  width: 1440px;
+  height: 2476px;
+
+
+}
+/* Содержимое */
+.menu{
+  line-height: 30px;
+  }
+
+/* ? */
+  .logo{
+    text-align: left;
+  }
+/* Не снимает подчеркивание у ссылок */
+  .menu_item{
+    list-style: none;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+     }
+
+     /*  Добавить картинку корзины */
+
+  .actions_item{
+    list-style: none;
+    text-align:right;
+  }
+
+/* На этом этапе требуется привязывать надпись к левой стороне?   */
+.slide_title{
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+   }
+
+
+  .slide_text{
+    font-weight: normal;
+    line-height: 24px;
+    color: var(--basik-gray);
+    /* Требуется ли прописывать наследование у каждого элемента или наследуется по умолчанию? */
+    font-size: inherit;
+
+  }
+
+/* services */
+.services_list{
+  list-style: none;
+}
+
+.services_item{
+  text-align: center;
+}
+
+.services_name{
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  align-items: center;
+  text-transform: uppercase;
+  }
+
+  .services_text{
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+
+  }
+
+  .about_title{
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+
+  }
+
+
+  .about_text{
+    color: var(--basik-gray);
+    line-height: 24px;
+    font-weight: normal;
+    list-style: none;
+
+  }
+
+  .about_subtitle{
+    font-weight: bold;
+    line-height: 24px;
+    color: var(--basik-gray);
+    list-style: none;
+  }
+
+  .about_item{
+    color: var(--basik-gray);
+    font-weight: normal;
+    line-height: 24px;
+    list-style: none;
+  }
+
+  .about-stats_name{
+    font-weight: normal;
+    color: var(--basik-gray);
+    line-height: 18px;
+    list-style: none;
+  }
+
+/* Не знаю , что это такое, но делаю как на лайве */
+
+img {
+   max-width: 100%
+
+   }
+
+/* Конец img */
+
+
+
+
+     .partners{
+      text-align: center;
+
+     }
+
+     .about-stats_value{
+      font-size: 45px;
+      line-height: 64px;
+     }
+
+     .contacs-title{
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 30px;
+     }
+
+     .contacs-adress{
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 18px;
+     }
+
+
+     /* Social button не пошел */
+     /* интерактивные элементы сайта как делать не поняла */
+
+
+
+
