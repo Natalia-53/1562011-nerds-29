@@ -1,174 +1,254 @@
-/* Основные цвета */
-:root {
-  --basik-white: #ffffff;
-  --basik-neutral: #EEEEEE;
-  --basic-yellow: #EFC849;
-  --basic-green:#00CA74;
-  --basic-red: #FB565A;
-  --basik-gray: #283136;
-  --basik-black: #000000;
+html{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Global */
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+/* Основные цвета */
+:root {
+  --white: #ffffff;
+  --neutral: #EEEEEE;
+  --yellow: #EFC849;
+  --bricht-yellow: #EAB534;
+  --dark-yellow:#E5A722;
+  --green:#00CA74;
+  --bricht-green:#00BC6C;
+  --dark-green:#00AA62;
+  --red: #FB565A;
+  --bright-red:#E74246;
+  --dark-red:#D7373B;
+  --light-gray:#EEEEEE;
+  --gray: #283136;
+  --black: #000000;
+  --roboto:"Roboto", Arial, sans-serif;
+  --font-size:16px;
+  --font-lineheight:24px;
+}
+
+/* Базовые стили */
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: var(--roboto);
   font-size: 16px;
-  line-height: 18px;
-  font-style: normal;
-  background-position: top center;
-  background-color: var(--basik-white);
-  color: var(--basik-black);
-  position: relative;
-  width: 1440px;
-  height: 2476px;
-
-
-}
-/* Содержимое */
-.menu{
-  line-height: 30px;
-  }
-
-/* ? */
-  .logo{
-    text-align: left;
-  }
-/* Не снимает подчеркивание у ссылок */
-  .menu_item{
-    list-style: none;
-    text-align: center;
-    font-size: 16px;
-    line-height: 30px;
-     }
-
-     /*  Добавить картинку корзины */
-
-  .actions_item{
-    list-style: none;
-    text-align:right;
-  }
-
-/* На этом этапе требуется привязывать надпись к левой стороне?   */
-.slide_title{
-  font-weight: 500;
-  font-size: 55px;
-  line-height: 55px;
-   }
-
-
-  .slide_text{
-    font-weight: normal;
-    line-height: 24px;
-    color: var(--basik-gray);
-    /* Требуется ли прописывать наследование у каждого элемента или наследуется по умолчанию? */
-    font-size: inherit;
-
-  }
-
-/* services */
-.services_list{
-  list-style: none;
-}
-
-.services_item{
-  text-align: center;
-}
-
-.services_name{
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
-  align-items: center;
-  text-transform: uppercase;
-  }
-
-  .services_text{
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
+  font-weight:400;
   line-height: 24px;
+  color: #283136;
+  min-width: 1157px;
+}
 
-  }
+a{
+  text-decoration: none;
+}
 
-  .about_title{
+img{
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 
-    font-style: normal;
-    font-weight: 500;
-    font-size: 45px;
-    line-height: 45px;
+/* Утилитарные классы */
 
-  }
+.reset-ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Отступы h,p */
+.r-indent{
+margin:0 ;
+padding: 0;
+ }
 
 
-  .about_text{
-    color: var(--basik-gray);
-    line-height: 24px;
-    font-weight: normal;
-    list-style: none;
+/* Компонент */
+.button{
+  font-family: inherit;
+  text-transform: uppercase;
+  text-align: center;
+   color:#ffffff;
+   text-decoration: none;
+   font-weight: 500;
+   line-height: 18px;
+   outline: none;
+   border-radius: 3px;
+   border: 0;
+   padding-top: 17px;
+   padding-bottom: 16px;
+   padding-right: 40px;
+   padding-left: 39px;
+   transition: all 0.3s ease-in-out;
 
-  }
-
-  .about_subtitle{
-    font-weight: bold;
-    line-height: 24px;
-    color: var(--basik-gray);
-    list-style: none;
-  }
-
-  .about_item{
-    color: var(--basik-gray);
-    font-weight: normal;
-    line-height: 24px;
-    list-style: none;
-  }
-
-  .about-stats_name{
-    font-weight: normal;
-    color: var(--basik-gray);
-    line-height: 18px;
-    list-style: none;
-  }
-
-/* Не знаю , что это такое, но делаю как на лайве */
-
-img {
-   max-width: 100%
+   /* padding: 17px 40px 16px 39px; */
 
    }
 
-/* Конец img */
+   .button:active{
+     color:rgba(255, 255, 255, 0.3);
+     box-shadow: inset 3px 0px rgba(0, 1, 1, 0.1);
+   }
+
+   /* Модификаторы */
+
+   /* Не получилось прописать цвет через переменные */
+   .button-red{
+    background-color:#FB565A;
+  }
+
+  .button-green{
+    background-color:#00CA74;
+  }
+  .button-yellow{
+    background-color: #EFC849;
+  }
+  .button-gray{
+    background-color:  #283136;
+    color:var(--black)
+  }
 
 
+   /* Состояния */
 
+   .button-red:hover,
+   .button-red:focus{
+     background-color: #E74246;
+   }
+   .button-red:active{
+     background-color: #D7373B;
+   }
 
-     .partners{
-      text-align: center;
+   .button-green:hover,
+   .button-green:focus{
+     background-color: #00BC6C;
+   }
+   .button-green:active{
+     background-color: #00AA62;
+   }
+
+   .button-yellow:hover,
+   .button-yellow:focus{
+     background-color: #EAB534;
+   }
+   .button-yellow:active{
+     background-color: #E5A722;}
+
+     .button-gray:hover,
+     .button-gray:focus{
+      background-color: #DFDFDF;
+         }
+
+     .button-gray:active{
+       background-color: #D5D5D5;
 
      }
 
-     .about-stats_value{
-      font-size: 45px;
-      line-height: 64px;
-     }
-
-     .contacs-title{
-      font-weight: bold;
-      font-size: 18px;
-      line-height: 30px;
-     }
-
-     .contacs-adress{
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 18px;
-     }
 
 
-     /* Social button не пошел */
-     /* интерактивные элементы сайта как делать не поняла */
+
+
+
+
+
+   /* Секция-header */
+   .header{
+     background-color:#EEEEEE;
+   }
+
+
+   /* Блок-menu */
+   .menu{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   .menu_link,
+   .actions_link{
+     text-transform: uppercase;
+     font-weight: 500;
+     color: #000;
+     transition: all 0.3s ease-in-out;
+   }
+
+   .menu_link:hover,
+   .menu_link:focus,
+   .actions_link:hover,
+   .actions_link:focus{
+     color:#FB565A;
+   }
+
+
+   .menu_link:active,
+   .actions_link:active{
+     color: rgba(0, 0, 0, 0.3);
+
+   }
+
+
+
+
+   /* Секция-slider */
+   .slider{
+     background-color:var(--light-gray);
+   }
+
+   .social_link{
+     width: 81px;
+     height: 81px;
+     border-radius: 50%;
+     background-color: #E1E1E1;
+     display: flex;
+     justify-content:center ;
+     align-items: center;
+     transition: all0.3s ease-in-out;
+
+   }
+
+   .social_link:hover,
+   .social_link:focus{
+     background-color:#E74246;
+
+   }
+
+   .social_link:active{
+     background-color:#D7373B;
+     box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+
+   }
+   .social_link:active.social_img{
+     opacity: 0.3;
+   }
+
+
+   /* Секция-partners */
+   /* не работает */
+
+
+   .partners_link{
+    background-color: rgba(0, 0, 0, 0.2);
+   }
+   .partners_link:hover,
+   .partners_link:focus{
+     background-color: rgba(0, 0, 0, 0);
+     transition: all 0.3s ease-in-out;
+   }
+
+   .partners_link:active{
+   background-color: rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease-in-out;
+   }
+
+
+
+
+
+
 
 
 
