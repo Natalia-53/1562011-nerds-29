@@ -1,3 +1,10 @@
+/* Вопросы:
+1.По радио-точкам и чекбокс
+ 2.Гриды
+ 3 В каталоге в header background-color серый, мне нужно присоединить еще магазин готовых...
+ Ввела доп. класс bgc и установила фон, но..... :(  */
+
+
 html{
   box-sizing: border-box;
   margin: 0;
@@ -24,7 +31,9 @@ html{
   --bright-red:#E74246;
   --dark-red:#D7373B;
   --light-gray:#EEEEEE;
+  --gray-social:#E1E1E1;
   --gray: #283136;
+  --dark-gray:#D5D5D5;
   --black: #000000;
   --roboto:"Roboto", Arial, sans-serif;
   --font-size:16px;
@@ -39,8 +48,11 @@ body {
   font-size: 16px;
   font-weight:400;
   line-height: 24px;
-  color: #283136;
+  color: var(--gray);
   min-width: 1157px;
+
+  /* min-height: 100%;  */
+  /* Нужно ли прописать мин высоту, как в лайве? */
 }
 
 a{
@@ -66,13 +78,26 @@ margin:0 ;
 padding: 0;
  }
 
+ .visually-hidden{
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
 
+/*
 /* Компонент */
 .button{
   font-family: inherit;
   text-transform: uppercase;
   text-align: center;
-   color:#ffffff;
+   color:var(--white);
    text-decoration: none;
    font-weight: 500;
    line-height: 18px;
@@ -84,6 +109,7 @@ padding: 0;
    padding-right: 40px;
    padding-left: 39px;
    transition: all 0.3s ease-in-out;
+   display: inline-block;
 
    /* padding: 17px 40px 16px 39px; */
 
@@ -96,19 +122,18 @@ padding: 0;
 
    /* Модификаторы */
 
-   /* Не получилось прописать цвет через переменные */
    .button-red{
-    background-color:#FB565A;
+    background-color:var(--red);
   }
 
   .button-green{
-    background-color:#00CA74;
+    background-color:var(--green);
   }
   .button-yellow{
-    background-color: #EFC849;
+    background-color: var(--yellow);
   }
   .button-gray{
-    background-color:  #283136;
+    background-color:  var(--gray);
     color:var(--black)
   }
 
@@ -117,48 +142,59 @@ padding: 0;
 
    .button-red:hover,
    .button-red:focus{
-     background-color: #E74246;
+     background-color: var(--bright-red);
    }
    .button-red:active{
-     background-color: #D7373B;
+     background-color: var(--dark-red);
    }
 
    .button-green:hover,
    .button-green:focus{
-     background-color: #00BC6C;
+     background-color: var(--bricht-green);
    }
    .button-green:active{
-     background-color: #00AA62;
+     background-color: var(--dark-green);
    }
 
    .button-yellow:hover,
    .button-yellow:focus{
-     background-color: #EAB534;
+     background-color: var(--bricht-yellow);
    }
    .button-yellow:active{
-     background-color: #E5A722;}
+     background-color: var(--dark-yellow);
+    }
 
      .button-gray:hover,
      .button-gray:focus{
-      background-color: #DFDFDF;
+      background-color: var(--light-gray);
          }
 
      .button-gray:active{
-       background-color: #D5D5D5;
+       background-color: var(--dark-gray);
+       color: rgba(0, 0, 0, 0.3);
 
      }
 
 
 
-
-
-
-
-
    /* Секция-header */
    .header{
-     background-color:#EEEEEE;
+     background-color:var(--light-gray);
+
    }
+
+   .logo_image:hover,
+   .logo_image:focus {
+     color: var(--black);
+   }
+   .logo_image:active {
+     opacity: 0.3;
+     transition: all 0.3s ease-in-out;
+   }
+
+
+
+
 
 
    /* Блок-menu */
@@ -168,11 +204,13 @@ padding: 0;
      align-items: center;
    }
 
+
+
    .menu_link,
    .actions_link{
      text-transform: uppercase;
      font-weight: 500;
-     color: #000;
+     color:var(--black);
      transition: all 0.3s ease-in-out;
    }
 
@@ -196,60 +234,171 @@ padding: 0;
    /* Секция-slider */
    .slider{
      background-color:var(--light-gray);
-   }
+      }
+
+    .slide_title{
+      font-size: 55px;
+      line-height: 55px;
+      align-items: center;
+      display: block;
+
+    }
+
+    .bgc {
+      background-color: var(--light-gray);
+    }
+
+    /* Секция-social */
 
    .social_link{
      width: 81px;
      height: 81px;
      border-radius: 50%;
-     background-color: #E1E1E1;
+     background-color: var(--gray-social);
      display: flex;
      justify-content:center ;
      align-items: center;
      transition: all0.3s ease-in-out;
-
    }
 
    .social_link:hover,
    .social_link:focus{
      background-color:#E74246;
-
    }
 
-   .social_link:active{
+   .social_link:active {
      background-color:#D7373B;
      box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+   }
 
+
+   .social_link:active .social_img {
+    opacity: 0.3;
    }
-   .social_link:active.social_img{
-     opacity: 0.3;
-   }
+
+
+
+
+
+
 
 
    /* Секция-partners */
-   /* не работает */
+
+
 
 
    .partners_link{
-    background-color: rgba(0, 0, 0, 0.2);
+
+     list-style: none;
+     padding: 0;
+     margin: 0;
+
    }
-   .partners_link:hover,
-   .partners_link:focus{
-     background-color: rgba(0, 0, 0, 0);
+
+   .partners_link {
+     display: block;
+   }
+
+   .partners_image {
+     color: var(--black);
+     opacity: 0.2;
      transition: all 0.3s ease-in-out;
    }
-
-   .partners_link:active{
-   background-color: rgba(0, 0, 0, 0.1);
-   transition: all 0.3s ease-in-out;
+   .partners_image:hover,
+   .partners_image:focus {
+     opacity: 1;
+     transition: inherit;
+   }
+   .partners_image:active {
+     opacity: 0.3;
+     transition: inherit;
    }
 
 
 
+ .services_name{
+  text-transform: uppercase;
+  font-size: 24px;
+ }
+
+ .about_title{
+   font-size: 45px;
+   line-height: 45px
+ }
+
+ .about_subtitle{
+   text-transform: uppercase;
+
+ }
+
+
+/* Секция-footer */
+ .footer-info_title {
+   font-size: 36px;
+   line-height: 36px;
+
+ }
+
+
+/* Секция-catalog */
+ .sort_link {
+   font-size: 14px;
+   left: 18px;
+   text-transform: uppercase;
+   color: var(--black);
+
+ }
+
+ .catalog_title {
+   text-transform: uppercase;
+
+ }
+
+ .grid_link {
+   color: var(--gray);
+   font-size: 16px;
+   line-height: 19px;
+ }
+
+ .grid_link:hover,
+ .grid_link:focus {
+   color: #4D4D4D;
+   transition: all 0.3s ease-in-out;
+ }
 
 
 
 
+ .pagination_link{
+   width: 50px;
+   height: 50px;
+   border-radius: 3px;
+   background-color: var(--light-gray);
+   transition: all0.3s ease-in-out;
+   display: flex;
+   align-items: center;
+   justify-content:center ;
+   font-size: 16px;
+   line-height: 18px;
+   color: var(--black);
 
+}
+/* Не совсем */
+.pagination_link:hover {
+  background-color: #DFDFDF;
+  transition: all 0.3s ease-in-out;
+}
 
+.pagination_link:focus {
+  background-color: var(--dark-gray);
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+.pagination_link:active {
+  background: rgba(0, 0, 0, 0.0001);
+  border: 3px solid #DBDBDB;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
 
