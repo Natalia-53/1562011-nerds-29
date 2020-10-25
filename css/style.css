@@ -1,9 +1,3 @@
-/* Вопросы:
-1.По радио-точкам и чекбокс
- 2.Гриды
- 3 В каталоге в header background-color серый, мне нужно присоединить еще магазин готовых...
- Ввела доп. класс bgc и установила фон, но..... :(  */
-
 
 html{
   box-sizing: border-box;
@@ -51,12 +45,14 @@ body {
   color: var(--gray);
   min-width: 1157px;
 
+
   /* min-height: 100%;  */
   /* Нужно ли прописать мин высоту, как в лайве? */
 }
 
 a{
   text-decoration: none;
+  color: #000000;
 }
 
 img{
@@ -179,8 +175,9 @@ overflow: hidden;
 
    /* Секция-header */
    .header{
+     grid-area: header;
      background-color:var(--light-gray);
-
+     min-height: 355px;
    }
 
    .logo_image:hover,
@@ -196,15 +193,12 @@ overflow: hidden;
 
 
 
-
    /* Блок-menu */
    .menu{
      display: flex;
      justify-content: space-between;
      align-items: center;
    }
-
-
 
    .menu_link,
    .actions_link{
@@ -225,10 +219,7 @@ overflow: hidden;
    .menu_link:active,
    .actions_link:active{
      color: rgba(0, 0, 0, 0.3);
-
    }
-
-
 
 
    /* Секция-slider */
@@ -239,14 +230,57 @@ overflow: hidden;
     .slide_title{
       font-size: 55px;
       line-height: 55px;
+     background-color: var(--light-gray);
+     margin: 0;
+     padding: 0;
+     text-align: center;
+     padding-top: 72px;
+
+
+
+
+    }
+
+    .catalog {
+      display: grid;
+      grid-template-columns: 200px 758px;
+      justify-content: space-between;
+    }
+    .sort {
+      display: flex;
       align-items: center;
-      display: block;
+      justify-content: space-between;
+    }
+    .sort-list {
+      display: flex;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: 360px 360px;
+      justify-content: space-between;
+      grid-row-gap: 32px;
 
     }
 
-    .bgc {
-      background-color: var(--light-gray);
+    .pagination {
+      display: flex;
+      padding-top: 55px;
+      padding-bottom: 60px;
     }
+
+    .pagination_item:not(:last-child) {
+      margin-right: 11px;
+    }
+    .next {
+      width: auto;
+      padding-left: 78px;
+      padding-right: 77px;
+
+    }
+
+
+
 
     /* Секция-social */
 
@@ -258,7 +292,7 @@ overflow: hidden;
      display: flex;
      justify-content:center ;
      align-items: center;
-     transition: all0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
    }
 
    .social_link:hover,
@@ -275,6 +309,9 @@ overflow: hidden;
    .social_link:active .social_img {
     opacity: 0.3;
    }
+
+
+
 
 
 
@@ -323,8 +360,11 @@ overflow: hidden;
  }
 
  .about_title{
+
    font-size: 45px;
-   line-height: 45px
+   line-height: 45px;
+
+
  }
 
  .about_subtitle{
@@ -333,11 +373,17 @@ overflow: hidden;
  }
 
 
+
+
+
+
 /* Секция-footer */
  .footer-info_title {
    font-size: 36px;
    line-height: 36px;
-
+ }
+ .footer {
+   grid-area: footer;
  }
 
 
@@ -355,18 +401,48 @@ overflow: hidden;
 
  }
 
- .grid_link {
-   color: var(--gray);
-   font-size: 16px;
-   line-height: 19px;
+ .products-item_cover {
+  color: #4D4D4D;
+  opacity: 0.12;
+
  }
 
- .grid_link:hover,
- .grid_link:focus {
-   color: #4D4D4D;
+ .products-item_cover:hover,
+ .products-item_cover:focus {
+   color:#4D4D4D;
+   opacity: 1;
    transition: all 0.3s ease-in-out;
  }
 
+  .products-item {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   overflow: hidden;
+
+ }
+
+ .products-item_description {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   background-color: #EEEEEE;
+   width: 100%;
+   transform: translateY(100%);
+   transition: all 0.3s ease-in-out;
+
+ }
+
+ .products-item:hover .products-item_description {
+   transform: translateY(0);
+ }
+ .products-item_description {
+   min-height: 231px;
+   text-align: center;
+ }
+ .products-item_text {
+   padding: 12px 53px 32px 52px;
+ }
 
 
 
@@ -401,4 +477,128 @@ overflow: hidden;
   box-sizing: border-box;
   border-radius: 3px;
 }
+
+
+
+.container {
+  max-width: 1157px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services_list {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  justify-content: space-between;
+  padding-right: 60px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 660px 360px;
+  justify-content: space-between;
+}
+
+
+.partners_list {
+  display:grid;
+  grid-template-columns: 281px 300px 300px 279px;
+  align-items: center;
+}
+
+
+.partners_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts {
+  min-height: 416px;
+  background: url("../img/footer-info/map.jpg")  ;
+  position: relative;
+}
+
+.contacts_block {
+  max-width: 319px;
+   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--white);
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+
+}
+
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 261px 758px ;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.menu {
+  max-width:437px ;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  }
+
+.about-stats {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts-adress {
+padding-left: 50px;
+padding-right: 39px;
+padding-bottom: 16px;
+}
+
+
+.contacts-title {
+  padding-bottom: 23px;
+}
+
+.products-item_button {
+  color: #ffffff;
+  background-color: #FB565A;
+  border-radius: 3px;
+  padding: 17px 72px 15px 72px;
+
+}
+.products-item_button:hover,
+.products-item_button:focus {
+  background-color: #E74246;
+  transition: all 0.3s ease-in-out;
+}
+
+.products-item_button:active {
+background-color: #D7373B;
+transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
 

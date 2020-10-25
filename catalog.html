@@ -11,31 +11,30 @@
 
 
   <body>
-     <!--Содержимое-->
-      <header class="header">
-          <nav class="nav">
-              <!--Logo-->
-              <a href="index.html" class="logo_link">
-                  <img src="img/header/nerds-logo.svg" alt="Нёрдс" class="logo_image" width="159.87"; height="65";>
-              </a>
-              <!--Menu-->
-              <ul class="menu reset-ul">
-                  <li class="menu_item"><a href="#" class="menu_link">Студия</a></li>
-                  <li class="menu_item"><a href="#" class="menu_link">Клиенты</a></li>
-                  <li class="menu_item"><a href="catalog.html" class="menu_link">Магазин</a></li>
-                  <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
-              </ul>
-               <!--Actions-->
-               <ul class="actions reset-ul">
-                    <li class="actions_item"><a href="#" class="actions_link">Корзина</a></li>
-                    <img src="img/header/cart-icon.svg" alt="Корзина" class="cart" width="15"; height="15";>
-              </ul>
-         </nav>
+       <!--Содержимое-->
+       <header class="header">
+        <nav class="nav container">
+          <!-- Логотип -->
+         <a href="#" class="logo_link">
+           <img src="img/header/nerds-logo.svg" class="logo_image" width="160" height="65" alt="Нёрдс">
+       </a>
+       <!-- меню -->
+       <ul class="menu reset-ul">
+         <li class="menu_item"><a href="#" class="menu_link">Студия</a></li>
+         <li class="menu_item"><a href="#" class="menu_link">Клиенты</a></li>
+         <li class="menu_item"><a href="catalog.html" class="menu_link">Магазин</a></li>
+         <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
+       </ul>
+    <!-- Корзина -->
+       <ul class="actions reset-ul">
+         <li class="actions_item"><a href="#" class="actions_link">Корзина</a></li>
+       </ul>
+        </nav>
+        <h1 class="slide_title container">Магазин готовых шаблонов </h1>
       </header>
-
       <main>
-       <h1 class="slide_title bgc">Магазин готовых шаблонов </h1>
-      <section class="catalog">
+
+      <section class="catalog container">
 
       <!--   left-->
       <div class="filters">
@@ -43,48 +42,57 @@
 
 
         <h3 class="catalog_title">Сетка</h3>
-        <ul class="grid_list reset-ul">
-          <li class="grid_item">
-            <a href="#" class="grid_link">Адаптивная</a>
-            <img src="img/catalog/radio_on.svg"  width="25" height="25" alt="радио-кнопка">
+        <form class="form">
+          <ul class="form_list reset-ul">
+            <li class="form_item">
+              <label class="form_label"></label>
+              <input type="radio" name="grid" value="type-1">
+              Адаптивная
+            </li>
+            <li class="form_item">
+              <label class="form_label"></label>
+              <input type="radio" name="grid" value="type-2">
+              Фиксированная
+            </li>
+            <li class="form_item">
+              <label class="form_label"></label>
+              <input type="radio" name="grid" value="type-3">
+              Резиновая
+            </li>
+          </ul>
+        </form>
+
+
+           <h3 class="catalog_title">Особенности</h3>
+        <ul class="form_list  reset-ul">
+          <li class="form_item">
+            <label class="form_label"></label>
+            <input type="checkbox" name="slider" value="slider">
+          Слайдер
           </li>
 
-           <li>
-            <img src="img/catalog/radio_on.svg"  width="25" height="25" alt="радио-кнопка">
-            <a href="#" class="grid_link">Фиксированная</a>
+           <li class="form_item">
+            <label class="form_label"></label>
+            <input type="checkbox" name="adv-block" value="adv-block">
+            Блок преимуществ
            </li>
 
-           <li>
-            <img src="img/catalog/radio_on.svg"  width="25" height="25" alt="радио-кнопка">
-            <a href="#" class="grid_link">Резиновая</a>
+           <li class="form_item">
+            <label class="form_label"></label>
+            <input type="checkbox" name="news" value="news">
+            Новости
            </li>
 
-        </ul>
-
-        <h3 class="catalog_title">Особенности</h3>
-        <ul class="grid_item  reset-ul">
-          <li class="grid_item">
-            <img src="img/catalog/checkbox-on.svg"  width="25" height="25" alt="чекбокс">
-            <a href="#" class="grid_link">Слайдер</a>
+           <li class="form_item">
+            <label class="form_label"></label>
+            <input type="checkbox" name="gallery" value="gallery">
+            Галерея
            </li>
 
-           <li class="grid_item">
-            <img src="img/catalog/checkbox-on.svg"  width="25" height="25" alt="чекбокс">
-            <a href="#" class="grid_link">Блок преимуществ</a>
-           </li>
-
-           <li class="grid_item">
-            <img src="img/catalog/checkbox-on.svg"  width="25" height="25" alt="чекбокс">
-           </li>
-
-           <li class="grid_item">
-            <img src="img/catalog/checkbox-on.svg"  width="25" height="25" alt="чекбокс">
-            <a href="#" class="grid_link">Галерея</a>
-           </li>
-
-           <li class="grid_item">
-            <img src="img/catalog/checkbox-on.svg"  width="25" height="25" alt="чекбокс">
-            <a href="#" class="grid_link">Корзина</a>
+           <li class="form_item">
+            <label class="form_label"></label>
+            <input type="checkbox" name="basket" value="basket">
+            Корзина
            </li>
 
         </ul>
@@ -96,67 +104,71 @@
       <!-- right -->
       <div class="catalog-content">
           <!-- Sort -->
-          <h3 class="catalog_title">Сортировать</h3>
-           <ul class="sort-list reset-ul ">
-               <li class="sort_item">
-                  <a href="#" class="sort_link ">По цене</a>
-               </li>
-               <li class="sort_item">
-                  <a href="#" class="sort_link ">По типу</a>
-               </li>
+          <div class="sort">
+            <h3 class="catalog_title">Сортировать</h3>
+            <ul class="sort-list reset-ul ">
                 <li class="sort_item">
-                  <a href="#" class="sort_link ">По названию</a>
-               </li>
-               <li class="sort_item">
-                  <a class="sort_link. sort_link-ascending" href="#"></a>
-                  <img src="img/catalog/up_arrow.svg"  class="sort_img" width="11" height="10" alt="Стрелка вверх">
-                  <a class="sort_link. sort_link-descending" href="#"></a>
-                  <img src="img/catalog/down_arrow.svg"  class="sort_img" width="11" height="10" alt="Стрелка вниз">
-               </li>
-           </ul>
+                   <a href="#" class="sort_link ">По цене</a>
+                </li>
+                <li class="sort_item">
+                   <a href="#" class="sort_link ">По типу</a>
+                </li>
+                 <li class="sort_item">
+                   <a href="#" class="sort_link ">По названию</a>
+                </li>
+                <li class="sort_item">
+                   <a class="sort_link. sort_link-ascending" href="#"></a>
+                   <img src="img/catalog/up_arrow.svg"  class="sort_img" width="11" height="10" alt="Стрелка вверх">
+                   <a class="sort_link. sort_link-descending" href="#"></a>
+                   <img src="img/catalog/down_arrow.svg"  class="sort_img" width="11" height="10" alt="Стрелка вниз">
+                </li>
+            </ul>
+
+          </div>
+
           <!-- Products -->
           <ul class="products reset-ul">
               <!-- Item -->
               <li class="products-item">
-                  <img class="products-item_cover" src="img/products/browser.svg"  width="360" height="40" alt="Окно браузера" >
-                  <img class="products-item_preview" src="img/products/sedona.png"  width="360" height="578" alt="Превью">
+                  <img src="img/catalog/browser.svg"  class="products-item_cover" width="360" height="40" alt="Окно браузера" >
+                  <img src="img/products/sedona.png"  class="products-item_preview" width="360" height="578" alt="Превью">
                   <div class="products-item_description">
-                      <h3 class="roducts-item_name">Sedona</h3>
-                      <p class="roducts-item_text">Информационный сайт для туристов</p>
-                      <a class="roducts-item_button" href="#">9900 Р</a>
+                      <h3 class="products-item_name">Sedona</h3>
+                      <p class="products-item_text">Информационный сайт для туристов</p>
+                      <a class="products-item_button" href="#">9900 Р</a>
                   </div>
                 </li>
 
 
                 <li class="products-item">
-                    <img class="products-item_cover" src="img/products/browser.svg" width="360" height="40" alt="Окно браузера">
-                    <img class="products-item_preview" src="img/products/pink.png"  width="360" height="578" alt="Превью">
+                    <img src="img/catalog/browser.svg"  class="products-item_cover"  width="360" height="40" alt="Окно браузера">
+                    <img src="img/products/pink.png" class="products-item_preview" width="360" height="578" alt="Превью">
                     <div class="products-item_description">
-                        <h3 class="roducts-item_name">Pink App</h3>
-                        <p class="roducts-item_text">Продуктовый лендинг приложения для iOS и Android</p>
-                        <a class="roducts-item_button" href="#">9900 Р</a>
+                        <h3 class="products-item_name">Pink App</h3>
+                        <p class="products-item_text">Продуктовый лендинг приложения для iOS и Android</p>
+                        <a class="products-item_button" href="#">9900 Р</a>
                     </div>
                   </li>
 
 
                   <li class="products-item">
-                    <img class="products-item_cover" src="img/products/browser.svg" width="360" height="40" alt="Окно браузера">
-                    <img class="products-item_preview" src="img/products/borodinski.png"  width="360" height="578" alt="Превью">
+                    <img src="img/catalog/browser.svg" class="products-item_cover"width="360" height="40" alt="Окно браузера">
+                    <img src="img/products/borodinski.png" class="products-item_preview" width="360" height="578" alt="Превью">
                     <div class="products-item_description">
-                        <h3 class="roducts-item_name ">Barbershop</h3>
-                        <p class="roducts-item_text">Сайт салона красоты.Для мужчин, да.</p>
-                        <a class="roducts-item_button" href="#">9900 Р</a>
+                        <h3 class="products-item_name">Barbershop</h3>
+                        <p class="products-item_text">Сайт салона красоты.Для мужчин, да.</p>
+                        <a class="products-item_button" href="#">9900 Р</a>
                     </div>
                   </li>
 
 
                   <li class="products-item">
-                    <img class="products-item_cover" src="img/products/browser.svg"  width="360" height="40"alt="Окно браузера">
-                    <img class="products-item_preview" src="img/products/mishka.png" alt="Превью" width="360" height="578">
+                    <img src="img/catalog/browser.svg" class="products-item_cover"  width="360" height="40"alt="Окно браузера">
+                    <img src="img/products/mishka.png" class="products-item_preview"  width="360" height="578" alt="Превью">
                     <div class="products-item_description">
-                        <h3 class="roducts-item_name">MISHKA </h3>
-                        <p class="roducts-item_text">Интернет-магазин вязаных игрушек.</p>
-                        <a class="roducts-item_button" href="#">9900 Р</a>
+                        <h3 class="products-item_name">MISHKA </h3>
+                        <p class="products-item_text">Интернет-магазин вязаных игрушек.</p>
+                        <a class="products-item_button" href="#">9900 Р</a>
                     </div>
                   </li>
 
@@ -164,94 +176,102 @@
 
 
                   <li class="products-item">
-                    <img class="products-item_cover" src="img/products/browser.svg"  width="360" height="40"alt="Окно браузера">
-                    <img class="products-item_preview" src="img/products/aplus.png"  width="360" height="578" alt="Превью">
+                    <img src="img/catalog/browser.svg"  class="products-item_cover" width="360" height="40"alt="Окно браузера">
+                    <img src="img/products/aplus.png" class="products-item_preview"  width="360" height="578" alt="Превью">
                     <div class="products-item_description">
-                        <h3 class="roducts-item_name">A Plus</h3>
-                        <p class="roducts-item_text">Лендинг курсов повышения квалификации.</p>
-                        <a class="roducts-item_button" href="#">9900 Р</a>
+                        <h3 class="products-item_name">A Plus</h3>
+                        <p class="products-item_text">Лендинг курсов повышения квалификации.</p>
+                        <a class="products-item_button" href="#">9900 Р</a>
                     </div>
                   </li>
 
 
                   <li class="products-item">
-                    <img class="products-item_cover" src="img/products/browser.svg"  width="360" height="40"alt="Окно браузера">
-                    <img class="products-item_preview" src="img/products/kvast.png" width="360" height="578" alt="Превью">
+                    <img src="img/catalog/browser.svg" class="products-item_cover" width="360" height="40"alt="Окно браузера">
+                    <img src="img/products/kvast.png"class="products-item_preview" width="360" height="578" alt="Превью">
                     <div class="products-item_description">
-                        <h3 class="roducts-item_">КВАСТ</h3>
-                        <p class="roducts-item_text">Промо-сайт производителя крафтового кваса.</p>
-                        <a class="roducts-item_button" href="#">9900 Р</a>
+                        <h3 class="products-item_name">КВАСТ</h3>
+                        <p class="products-item_text">Промо-сайт производителя крафтового кваса.</p>
+                        <a class="products-item_button" href="#">9900 Р</a>
                     </div>
                   </li>
 
           </ul>
+          <!-- Pagination -->
+          <ul class="pagination reset-ul">
+            <li class="pagination_item">
+               <!-- <span class="pagination_link">1</span> -->
+               <a class="pagination_link " href="index.html">1</a>
+             </li>
+             <li class="pagination_item">
+               <a class="pagination_link " href="catalog.html">2</a>
+             </li>
+
+           <li class="pagination_item">
+                <a class="pagination_link " href="#">3</a>
+          </li>
+
+            <li class="pagination_item">
+               <a class="pagination_link next" href="#">Следующая</a>
+             </li>
+
+
+       </ul>
+
+
         </section>
 
 
 
-          <!-- Pagination -->
-          <ul class="pagination reset-ul">
-               <li class="pagination_item">
-                  <!-- <span class="pagination_link">1</span> -->
-                  <a class="pagination_link contacs" href="index.html">1</a>
-                </li>
-                <li class="pagination_item">
-                  <a class="pagination_link contacs" href="catalog.html">2</a>
-                </li>
-
-              <li class="pagination_item"></li>
-                   <a class="pagination_link contacs" href="#">3</a>
-             </li>
-
-               <li class="pagination_item"></li>
-                  <a class="pagination_link contacs" href="#">Следующая</a>
-                </li>
-
-
-          </ul>
 
         </div>
       </main>
       <footer class="footer">
         <h2 class="visually-hidden r-indent">Контакты</h2>
-        <section class="contacs">
-            <div class="map">
-              <img src="img/footer-info/map.jpg"  class="map" width="1440" height="416" alt="Карта">
+        <section class="contacts container">
+            <div class="map" id="map">
+              <!-- <img src="img/footer-info/map.jpg"  class="map" width="1440" height="416" alt="Карта">
+              <img src="img/footer-info/map-marker.png"  width="231" height="190" alt="Маркер"> -->
             </div>
-            <div class="contacs-block">
-                <h3 class="contacs-title r-indent">NЁRDS DESIGN STUDIO</h3>
-                <p class="contacs-adress r-indent">
-                    191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8
-                </p>
-                <p class="contacs-adress r-indent">
-                    тел.
-                    <a href="tel.+78122757575">+7 (812) 275-75-75</a>
-                </p>
-            </div>
-         <button class="button button-red">Напишите нам</button>
-            </section>
+            <div class="container contacts_container">
+              <div class="contacts_block">
+                <h3 class="contacts-title r-indent">NЁRDS DESIGN STUDIO</h3>
+              <p class="contacts-adress r-indent">
+                  191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8
+              </p>
+              <p class="contacts-adress r-indent">
+                  тел.
+                  <a href="tel.+78122757575">+7 (812) 275-75-75</a>
+              </p>
+              <button class="button button-red">Напишите нам</button>
+              </div>
 
-        <section class="footer-info">
-          <ul class="social reset-ul">
-              <li class="social_item">
-                <a href="#" class="social_link" >
-                    <img src="img/footer-info/vk-icon.svg"  class="social_img" width="81"  height="81" alt="В контакте"></a>
-              </li>
-              <li class="social_item">
-                  <a href="#" class="social_link" >
-                      <img src="img/footer-info/fb-icon.svg"  class="social_img" width="81" height="81"  alt="Фейсбук"></a>
-              </li>
-              <li class="social_item">
-                  <a href="#" class="social_link" >
-                      <img src="img/footer-info/insta-icon.svg"  class="social_img" width="81"  height="81" alt="Инстаграмм"></a>
-              </li>
-            </ul>
-            <div class="footer-info_block">
-                <p class="footer-info_title r-indent"> Давайте дружить, это выгодно!</p>
-                <p class="footer-info_discount r-indent"> Скидка 10% для друзей из социальных сетей.</p>
             </div>
 
-      </section>
+          </section>
+
+
+        <section class="footer-info container">
+            <ul class="social reset-ul">
+                <li class="social_item">
+                  <a href="#" class="social_link" >
+                      <img src="img/footer-info/vk-icon.svg"  class="social_img"  alt="В контакте"></a>
+                </li>
+                <li class="social_item">
+                    <a href="#" class="social_link" >
+                        <img src="img/footer-info/fb-icon.svg"  class="social_img"   alt="Фейсбук"></a>
+                </li>
+                <li class="social_item">
+                    <a href="#" class="social_link" >
+                        <img src="img/footer-info/insta-icon.svg" class="social_img"  alt="Инстаграмм"></a>
+                </li>
+              </ul>
+              <div class="footer-info_block">
+                  <p class="footer-info_title r-indent"> Давайте дружить, это выгодно!</p>
+                  <p class="footer-info_discount r-indent"> Скидка 10% для друзей из социальных сетей.</p>
+              </div>
+
+        </section>
 
 
       </footer>

@@ -1,6 +1,6 @@
     <!DOCTYPE html>
     <html lang="ru">
-    <head>
+      <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML Academy: Нёрдс</title>
@@ -9,38 +9,37 @@
         <link rel="stylesheet" href="css/style.css">
       </head>
 
-
       <body>
          <!--Содержимое-->
-          <header class="header">
-              <nav class="nav">
-                  <!--Logo-->
-                  <a href="#" class="logo_link">
-                      <img src="img/header/nerds-logo.svg"  class="logo_image" width="159.87"; height="65"; alt="Нёрдс">
-                  </a>
-                  <!--Menu-->
-                  <ul class="menu reset-ul">
-                      <li class="menu_item"><a href="#" class="menu_link">Студия</a></li>
-                      <li class="menu_item"><a href="#" class="menu_link">Клиенты</a></li>
-                      <li class="menu_item"><a href="catalog.html" class="menu_link">Магазин</a></li>
-                      <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
-                  </ul>
-                   <!--Actions-->
-                   <ul class="actions reset-ul">
-                        <li class="actions_item"><a href="#" class="actions_link">Корзина</a></li>
-                        <img src="img/header/cart-icon.svg"  class="cart" width="15"; height="15"; alt="Корзина">
-                  </ul>
-             </nav>
-          </header>
+         <header class="header">
+           <nav class="nav container">
+             <!-- Логотип -->
+            <a href="#" class="logo_link">
+              <img src="img/header/nerds-logo.svg" class="logo_image" width="160" height="65" alt="Нёрдс">
+          </a>
+          <!-- меню -->
+          <ul class="menu reset-ul">
+            <li class="menu_item"><a href="#" class="menu_link">Студия</a></li>
+            <li class="menu_item"><a href="#" class="menu_link">Клиенты</a></li>
+            <li class="menu_item"><a href="catalog.html" class="menu_link">Магазин</a></li>
+            <li class="menu_item"><a href="#" class="menu_link">Контакты</a></li>
+          </ul>
+       <!-- Корзина -->
+          <ul class="actions reset-ul">
+            <li class="actions_item"><a href="#" class="actions_link">Корзина</a></li>
+          </ul>
+           </nav>
+         </header>
 
-          <main>
+
+          <main class="main">
               <!--Содержание-->
            <h1 class="visually-hidden">Магазин готовых шаблонов </h1>
-            <section class="slider">
+            <section class="slider ">
                 <!--Headline-->
                 <h2 class="visually-hidden">Преимущества</h2>
 
-                <div class="slider">
+                <div class="slider container">
                     <!--Slide-->
                     <div class="slide">
                         <p class="slide_title r-indent">Долго, дорого, <br> скурупулёзно</p>
@@ -52,14 +51,14 @@
                     <div class="slide">
                         <p class="slide_title r-indent">Любим математику <br> как никто другой</p>
                         <p class="slide_text r-indent">Никакого креатива, только математические формулы <br> для расчета идеальных пропорций.</p>
-                        <!-- <img src="img/header/slider_2.png" class="slider_image" width="760" height="431" alt="Слайд_2" > -->
+                        <img src="img/header/slider_2.png" class="slider_image" width="760" height="431" alt="Слайд_2" >
                         <a class="button button-red" href="#">Узнать больше</a>
                     </div>
                     <!--Slide-->
                     <div class="slide">
                         <p class="slide_title r-indent">Только ночь, <br> только хардкор</p>
                         <p class="slide_text r-indent">Работать днем, как все? Мы против этого. <br> Ближе к полуночи работа только начинается.</p>
-                        <!-- <img src="img/header/slider_3.png"  class="slider_image" width="760" height="431" alt="Слайд_3"> -->
+                        <img src="img/header/slider_3.png"  class="slider_image" width="760" height="431" alt="Слайд_3">
                         <a class="button button-red" href="#">Узнать больше</a>
                     </div>
                 </div>
@@ -69,8 +68,8 @@
             <section class="services">
                 <h2 class="visually-hidden">Услуги</h2>
 
-                <ul class="services_list reset-ul">
-                   <li class="services_item">
+                <ul class="services_list reset-ul container">
+                    <li class="services_item">
                      <h3 class="services_name r-indent">Веб-сайт</h3>
                      <img class="services_image" src="img/services/web.png" width="300"  height="146" alt="Веб-сайт">
                      <p class="services_text r-indent">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
@@ -95,10 +94,10 @@
             </section>
 
             <!-- О компании -->
-            <section class="about">
+            <section class="about container">
                 <h2 class="visually-hidden r-indent">О компании</h2>
                     <!--Item left-->
-                    <div class="about-column">
+                    <div class="about-column ">
                       <p class="about_title r-indent">Мы- маленькая, но гордая студия из Краснодара</p>
                       <p class="about_text r-indent">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
                       <h3 class="about_subtitle r-indent">Выполняем заказы на разработку:</h3>
@@ -110,7 +109,7 @@
                     </div>
 
                     <!--Item right-->
-                    <div class="about-column">
+                    <div class="about-column ">
                      <img class="about-logo" src="img/main/about_logo.png" width="360" height="208" alt="Логотип на фоне" >
                      <h3 class="about_subtitle r-indent">С 2004 года любим точность во всём:</h3>
                          <ul class="about-stats reset-ul">
@@ -122,15 +121,15 @@
                                <p class="about-stats_name r-indent">Уровень самоотдачи</p>
                            </li>
 
-                            <li class="about-stats">
+                            <li class="about-stats_item">
                                <p class="about-stats_value r-indent">
                                  100
                                  <sup>%</sup>
                                </p>
-                                <p class="about-stats_name">Соблюдение сроков</p>
+                                <p class="about-stats_name r-indent">Соблюдение сроков</p>
                             </li>
 
-                           <li class="about-stats">
+                           <li class="about-stats_item">
                              <p class="about-stats_value r-indent">
                                  50
                                  <sup>%</sup>
@@ -144,7 +143,7 @@
             </section>
 
 
-            <section class="partners">
+            <section class="partners container">
               <ul class="partners_list reset-ul">
                   <li class="partners_item">
                       <a href="https://htmlacademy.ru/intensive/htmlcss" class="partners_link">
@@ -181,38 +180,42 @@
 
          <footer class="footer">
             <h2 class="visually-hidden r-indent">Контакты</h2>
-            <section class="contacs">
-                <div class="map">
-                  <img src="img/footer-info/map.jpg"  class="map" width="1440" height="416" alt="Карта">
-                  <img src="img/footer-info/map-marker.png"  width="231" height="190" alt="Маркер">
+            <section class="contacts container">
+                <div class="map" id="map">
+                  <!-- <img src="img/footer-info/map.jpg"  class="map" width="1440" height="416" alt="Карта">
+                  <img src="img/footer-info/map-marker.png"  width="231" height="190" alt="Маркер"> -->
                 </div>
-                <div class="contacs-block">
-                    <h3 class="contacs-title r-indent">NЁRDS DESIGN STUDIO</h3>
-                    <p class="contacs-adress r-indent">
-                        191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8
-                    </p>
-                    <p class="contacs-adress r-indent">
-                        тел.
-                        <a href="tel.+78122757575">+7 (812) 275-75-75</a>
-                    </p>
+                <div class="container contacts_container">
+                  <div class="contacts_block">
+                    <h3 class="contacts-title r-indent">NЁRDS DESIGN STUDIO</h3>
+                  <p class="contacts-adress r-indent">
+                      191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8
+                   </p>
+                  <p class="contacts-adress r-indent">
+                      тел.
+                      <a href="tel.+78122757575">+7 (812) 275-75-75</a>
+                  </p>
+                  <button class="button button-red">Напишите нам</button>
+                  </div>
+
                 </div>
-             <button class="button button-red">Напишите нам</button>
-                </section>
+
+              </section>
 
 
-            <section class="footer-info">
+            <section class="footer-info container">
                 <ul class="social reset-ul">
                     <li class="social_item">
                       <a href="#" class="social_link" >
-                          <img src="img/footer-info/vk-icon.svg"  class="social_img" width="81" height="81" alt="В контакте"></a>
+                          <img src="img/footer-info/vk-icon.svg"  class="social_img"  alt="В контакте"></a>
                     </li>
                     <li class="social_item">
                         <a href="#" class="social_link" >
-                            <img src="img/footer-info/fb-icon.svg"  class="social_img"  width="81" height="81" alt="Фейсбук"></a>
+                            <img src="img/footer-info/fb-icon.svg"  class="social_img"   alt="Фейсбук"></a>
                     </li>
                     <li class="social_item">
                         <a href="#" class="social_link" >
-                            <img src="img/footer-info/insta-icon.svg"  class="social_img" width="81" height="81 " alt="Инстаграмм"></a>
+                            <img src="img/footer-info/insta-icon.svg" class="social_img"  alt="Инстаграмм"></a>
                     </li>
                   </ul>
                   <div class="footer-info_block">
@@ -226,6 +229,11 @@
 
 
          </footer>
+
+         <section class="email">
+          <p class="name">Ваше имя</p>
+         </section>
+
 
 
 
