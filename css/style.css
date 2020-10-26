@@ -177,7 +177,7 @@ overflow: hidden;
    .header{
      grid-area: header;
      background-color:var(--light-gray);
-     min-height: 355px;
+     /* min-height: 355px; */
    }
 
    .logo_image:hover,
@@ -234,10 +234,6 @@ overflow: hidden;
      margin: 0;
      padding: 0;
      text-align: center;
-     padding-top: 72px;
-
-
-
 
     }
 
@@ -357,7 +353,8 @@ overflow: hidden;
  .services_name{
   text-transform: uppercase;
   font-size: 24px;
- }
+
+   }
 
  .about_title{
 
@@ -369,6 +366,7 @@ overflow: hidden;
 
  .about_subtitle{
    text-transform: uppercase;
+
 
  }
 
@@ -488,10 +486,13 @@ overflow: hidden;
 }
 
 .services_list {
+  min-height: 507px;
   display: grid;
   grid-template-columns: 300px 300px 300px;
   justify-content: space-between;
   padding-right: 60px;
+
+
 }
 
 .about {
@@ -593,6 +594,31 @@ padding-bottom: 16px;
 background-color: #D7373B;
 transition: all 0.3s ease-in-out;
 }
+
+.about {
+  min-height: 525px;
+
+ }
+
+ .about_title {
+   padding-top: 73px;
+   padding-bottom: 32px;
+ }
+
+.about-logo {
+  padding-top: 39px;
+  padding-bottom: 37px;
+}
+
+.services_item {
+  padding-top: 80px;
+
+
+}
+
+
+
+
 
 
 
