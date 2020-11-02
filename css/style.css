@@ -304,7 +304,7 @@ overflow: hidden;
 
    .social_link:hover,
    .social_link:focus{
-     background-color:#E74246;
+     background-color: var(--red);
    }
 
    .social_link:active {
