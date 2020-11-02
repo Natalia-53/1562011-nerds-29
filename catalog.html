@@ -38,11 +38,39 @@
 
       <!--   left-->
       <div class="filters">
-        <h3 class="catalog_title">Стоимость</h3>
+
+        <fieldset class="filter-item">
+          <legend class="legend">Стоимость:</legend>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="
+                  width: 30%;
+                  margin-left: 20%
+                "></div>
+              </div>
+              <div class="toggle toggle-min" tabindex="0" style="
+                left: 20%
+              "></div>
+              <div class="toggle toggle-max" tabindex="0" style="
+                left: 50%
+              "></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+                от <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                до <input type="number" name="max-price" value="15000">
+              </label>
+            </div>
+          </div>
+      </fieldset>
 
 
-        <h3 class="catalog_title">Сетка</h3>
+
         <form class="form">
+          <legend class="legend">Сетка :</legend>
           <ul class="form_list reset-ul">
             <li class="form_item">
               <label class="form_label"></label>
@@ -63,8 +91,9 @@
         </form>
 
 
-           <h3 class="catalog_title">Особенности</h3>
+
         <ul class="form_list  reset-ul">
+          <legend class="legend">Особенности:</legend>
           <li class="form_item">
             <label class="form_label"></label>
             <input type="checkbox" name="slider" value="slider">
@@ -94,6 +123,10 @@
             <input type="checkbox" name="basket" value="basket">
             Корзина
            </li>
+           <li class="">
+            <a href="#" class="button">Показать</a>
+           </li>
+
 
         </ul>
 
