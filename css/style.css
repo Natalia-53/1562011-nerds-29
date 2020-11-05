@@ -243,10 +243,17 @@ overflow: hidden;
       line-height: 55px;
      background-color: var(--light-gray);
      margin: 0;
-     padding: 0;
+     /* padding: 50; */}
 
-
+     .name-catalog {
+      padding-top: 42px;
+      font-size: 55px;
+      padding-bottom: 74px;
+      text-align: center;
     }
+
+
+
 
     .catalog {
       display: grid;
@@ -364,7 +371,13 @@ overflow: hidden;
  .services_name{
   text-transform: uppercase;
   font-size: 24px;
+  padding-top:25px ;
+  padding-bottom: 16px;
 
+   }
+
+   .services_text {
+    padding-bottom: 32px;
    }
 
  .about_subtitle{
@@ -628,6 +641,7 @@ transition: all 0.3s ease-in-out;
 }
 
 .contacts {
+
   min-height: 416px;
   background: url("../img/footer-info/map.jpg")  ;
   position: relative;
@@ -821,7 +835,7 @@ transition: all 0.3s ease-in-out;
   padding-top: 38px;
 }
 
-.about-column:nth-child(3) {
+.about-column:nth-child {
   padding-top: 38px;
 }
 
@@ -843,6 +857,21 @@ font-weight: bold;
 }
 
 
+.map-point {
+  position: absolute;
+  top: 86px;
+  right: 387px;
+  width: 231px;
+  height: 190px;
+}
+
+.button_gray {
+color: var(--black);
+background-color: var(--light-gray);
+width: 260px;
+height: 50px;
+
+}
 
 
 
