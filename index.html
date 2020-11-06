@@ -11,7 +11,7 @@
 
       <body>
          <!--Содержимое-->
-         <header class="header">
+          <header class="header">
            <nav class="nav container">
              <!-- Логотип -->
             <a href="#" class="logo_link">
@@ -36,41 +36,49 @@
           <main class="main">
               <!--Содержание-->
            <h1 class="visually-hidden">Магазин готовых шаблонов </h1>
+
             <section class="slider ">
                 <!--Headline-->
                 <h2 class="visually-hidden">Преимущества</h2>
-
-                <div class="slider container">
-                    <!--Slide-->
-                    <div class="slide slide-current slider_1">
+                 <div class="slider container">
+                  <!--Slide-->
+                  <div class="slide_content">
+                    <div class="slide slider_1 active">
                         <p class="slide_title r-indent">Долго, дорого, <br> скурупулёзно</p>
                         <p class="slide_text r-indent">Математически выверенный дизайн <br>  для вашего сайта или мобильного приложения.</p>
                         <a class="button button-red" href="#">Узнать больше</a>
-                         <img src="img/header/slider_1.png" alt="Слайд_1" class="slider_image" width="760" height="431">
-
+                         <!-- <img src="img/header/slider_1.png" alt="Слайд_1" class="slider_image" width="760" height="431"> -->
+                     </div>
                     </div>
+
+
                     <!--Slide-->
+                  <div class="slide_content">
                     <div class="slide slider_2">
                         <p class="slide_title r-indent">Любим математику <br> как никто другой</p>
                         <p class="slide_text r-indent">Никакого креатива, только математические формулы <br> для расчета идеальных пропорций.</p>
-                        <img src="img/header/slider_2.png" class="slider_image" width="760" height="431" alt="Слайд_2" >
+                        <!-- <img src="img/header/slider_2.png" class="slider_image" width="760" height="431" alt="Слайд_2" > -->
                         <a class="button button-red" href="#">Узнать больше</a>
-                    </div>
+                     </div>
+                  </div>
+
+
                     <!--Slide-->
+                    <div class="slide_content">
                      <div class="slide slider_3">
                         <p class="slide_title r-indent">Только ночь, <br> только хардкор</p>
                         <p class="slide_text r-indent">Работать днем, как все? Мы против этого. <br> Ближе к полуночи работа только начинается.</p>
-                        <img src="img/header/slider_3.png"  class="slider_image" width="760" height="431" alt="Слайд_3">
+                        <!-- <img src="img/header/slider_3.png"  class="slider_image" width="760" height="431" alt="Слайд_3"> -->
                         <a class="button button-red" href="#">Узнать больше</a>
-                    </div>
+                     </div>
+                   </div>
 
-
-                </div>
-
-                <div class="slider-controls">
-                  <button class="current" type="button" aria-label="Первый слайд"></button>
-                  <button type="button" aria-label="Второй слайд"></button>
-                  <button type="button" aria-label="Третий слайд"></button>
+                <div class="slider-controls container">
+                  <ul class="slider_dots">
+                    <li class="slider_dot"> <button class="slider_dot-btn active"> </button></li>
+                    <li class="slider_dot"> <button class="slider_dot-btn "> </button></li>
+                    <li class="slider_dot"> <button class="slider_dot-btn "> </button></li>
+                  </ul>
                 </div>
 
             </section>
