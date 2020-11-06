@@ -242,6 +242,12 @@ overflow: hidden;
       }
 
 
+      .slider {
+        position: relative;
+         /* text-align: left; */
+      }
+
+
 
 
 
@@ -866,11 +872,10 @@ transition: all 0.3s ease-in-out;
 
 .slide_content {
   max-width: 540px;
-
-
-.modal {
-  display: none;
 }
+
+
+
 
 .about-stats_value {
   font-size: 45px;
